@@ -6,8 +6,12 @@ import styles from "./Calculator.module.css";
 const Calculator: React.FC = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState<number | string>();
+  
+  // This is what is displayed as the result
   const [ageInDays, setAgeInDays] = useState<number | null>(null);
 
+  
+  // Checks to see if the age input only has numbers
   const isNumber = (num: string): boolean => /^\d+$/.test(num);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
